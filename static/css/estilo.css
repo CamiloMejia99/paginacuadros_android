@@ -1,0 +1,1668 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+}
+
+header {
+    background: url(img/portada.png);
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 35px;
+    /* background-color: #000; */
+    color: #fff;
+    padding: 30px 0;
+}
+
+.contenedor {
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* oculto lo que queda fuera del .contenedor */
+    contain: paint;
+}
+
+
+/* SECCION CONTENEDOR DE ITEMS */
+
+.contenedor .contenedor-items {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    /* width: 60%; */
+    width: 100%;
+    transition: .3s;
+}
+
+.contenedor .contenedor-items .item {
+    max-width: 200px;
+    margin: auto;
+    border: 1px solid #666;
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+}
+
+.contenedor .contenedor-items .item .img-item {
+    width: 100%;
+}
+
+.contenedor .contenedor-items .item:hover {
+    box-shadow: 0 0 10px #666;
+    scale: 1.05;
+}
+
+.contenedor .contenedor-items .item .titulo-item {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contenedor .contenedor-items .item .precio-item {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.contenedor .contenedor-items .item .boton-item {
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: black;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* seccion carrito */
+
+.carrito {
+    border: 1px solid #666;
+    width: 35%;
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: auto;
+    position: sticky !important;
+    top: 0;
+    transition: .3s;
+    /* Estilos para ocultar */
+    margin-right: -100%;
+    opacity: 0;
+}
+
+.carrito .header-carrito {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.carrito .carrito-item {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    position: relative;
+    border-bottom: 1px solid #666;
+    padding: 20px;
+}
+
+.carrito .carrito-item img {
+    margin-right: 20px;
+}
+
+.carrito .carrito-item .carrito-item-titulo {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.carrito .carrito-item .selector-cantidad {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.carrito .carrito-item .carrito-item-cantidad {
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+.carrito .carrito-item .selector-cantidad i {
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.carrito .carrito-item .carrito-item-precio {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.carrito .carrito-item .btn-eliminar {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #000;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    z-index: 20;
+}
+
+.carrito .carrito-item .btn-eliminar i {
+    pointer-events: none;
+}
+
+.carrito-total {
+    background-color: #f3f3f3;
+    padding: 30px;
+}
+
+.carrito-total .fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carrito-total .btn-pagar {
+    display: block;
+    width: 100%;
+    border: none;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.carrito-total .btn-pagar:hover {
+    scale: 1.05;
+}
+
+
+/* SECCION RESPONSIVE */
+
+@media screen and (max-width: 850px) {
+    .contenedor {
+        display: block;
+    }
+    .contenedor-items {
+        width: 100% !important;
+    }
+    .carrito {
+        width: 100%;
+    }
+}
+
+.subtitulo {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+--detalles .detalles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles {
+    display: none;
+}
+
+.detalles {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+--detalles1 .detalles1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content1 {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content1 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content1 {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content1 img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles1 {
+    display: none;
+}
+
+.detalles1 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content1 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+--detalles1 .detalles1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content1 {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content1 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content1 {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content1 img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles1 {
+    display: none;
+}
+
+.detalles1 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content1 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+--detalles1 .detalles1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content1 {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content1 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content1 {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content1 img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles1 {
+    display: none;
+}
+
+.detalles1 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content1 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+--detalles1 .detalles1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content1 {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content1 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content1 {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content1 img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles1 {
+    display: none;
+}
+
+.detalles1 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content1 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+--detalles1 .detalles1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content1 {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content1 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content1 {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content1 img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles1 {
+    display: none;
+}
+
+.detalles1 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content1 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+--detalles2 .detalles2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content2 {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content2 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content2 {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content2 img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles2 {
+    display: none;
+}
+
+.detalles2 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content2 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+--detalles3 .detalles3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content3 {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content3 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content3 {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content3 img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles3 {
+    display: none;
+}
+
+.detalles3 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content3 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+--detalles4 .detalles4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content4 {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content4 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content4 {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content4 img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles4 {
+    display: none;
+}
+
+.detalles4 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content4 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+--detalles5 .detalles5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content5 {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content5 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content5 {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content5 img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles5 {
+    display: none;
+}
+
+.detalles5 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content5 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+--detalles6 .detalles6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content6 {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content6 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content6 {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content6 img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles6 {
+    display: none;
+}
+
+.detalles6 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content6 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+--detalles1 .detalles7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content7 {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content7 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content7 {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content7 img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles7 {
+    display: none;
+}
+
+.detalles7 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content7 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+--detalles8 .detalles8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content8 {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content8 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content8 {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content8 img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles8 {
+    display: none;
+}
+
+.detalles8 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content8 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+--detalles9 .detalles9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content9 {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content9 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content9 {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content9 img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles9 {
+    display: none;
+}
+
+.detalles9 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content9 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+--detalles10 .detalles10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content10 {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content10 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content10 {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content10 img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles10 {
+    display: none;
+}
+
+.detalles10 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content10 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+--detalles11 .detalles11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalles-content11 {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.detalles-content11 img {
+    width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    max-width: 1000px;
+    /* aumenta la anchura máxima */
+    margin: 0 auto;
+    /* centra horizontalmente */
+}
+
+.detalles11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+.detalles-content11 {
+    width: 90%;
+    max-width: 400px;
+    /* ajusta el ancho máximo */
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.detalles-content11 img {
+    width: 100%;
+    height: auto;
+}
+
+.detalles11 {
+    display: none;
+}
+
+.detalles11 {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detalles-content11 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #1f1f1f;
+    width: 80%;
+    max-width: 600px;
+}
+
+.btn-detalle {
+    display: block;
+    /* Convertir el botón en un elemento de bloque para poder centrarlo */
+    margin: auto;
+    /* Centrar horizontalmente */
+    background-color: black;
+    color: white;
+    width: 140px;
+    height: 27px;
+    border-radius: 5px;
+}

@@ -31,13 +31,13 @@ include("templates/validarSesion.php");
     <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
 
     <script >
-		var btnwpp = new Audio();
-		btnwpp.src="static/audios/Whatsapp.mp3"
-	</script>
+      var btnwpp = new Audio();
+      btnwpp.src="static/audios/Whatsapp.mp3"
+  </script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-   
+ 
     <div class="wrapper">
 
         <!--div class="preloader flex-column justify-content-center align-items-center">
@@ -60,81 +60,76 @@ include("templates/validarSesion.php");
                               ?>
                               <b>
                                 <i> 
-                                  Bienvenido/a
+                                  Usuario
                                   <?php
                                   echo $n;
                                   ?>
                                   <?php
                                   echo $a;
                                   ?>
-                                </i>
-                              </b>
-                              <?php
-                            }
-                          }
-                        }
-                        ?> 
-                    </h6>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="templates/CerrarSesion.php">
-                        <i class="fas fa-user-slash"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"  href="#" role="button">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+                              </i>
+                          </b>
+                          <?php
+                      }
+                  }
+              }
+              ?> 
+          </h6>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="templates/CerrarSesion.php">
+            <i class="fas fa-user-slash"></i>
+        </a>
+    </li>
+</ul>
+</nav>
 
-        <aside class="main-sidebar sidebar-dark-info elevation-4">
-            <a href="../index.php" class="brand-link">
-                <img src="static/img/CycLogo.png" alt="C&C logo" class="brand-image img-circle elevation-3">
-                <span class="brand-text font-weight-light">C&C</span>
+<aside class="main-sidebar sidebar-dark-info elevation-4">
+    <a href="../index.php" class="brand-link">
+        <img src="static/img/CycLogo.png" alt="C&C logo" class="brand-image img-circle elevation-3">
+        <span class="brand-text font-weight-light">C&C</span>
+    </a>
+
+    <div class="sidebar">
+
+     <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+            <li class="nav-item">
+                <a href="templates/list.php" class="nav-link">
+                    <i class="nav-icon fas fa-star"></i>
+                    <p>Cuadros</p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="precio.php" class="nav-link">
+                   <i class="nav-icon fas fa-store"></i>
+                   <p>Consulta precio</p>
+               </a>
+           </li>
+           
+           <li class="nav-item">
+            <a href="contactos.php" class="nav-link">
+                <i class="nav-icon fas fa-users"></i>
+                <p>Contactanos</p>
             </a>
+        </li>
 
-            <div class="sidebar">
+        <li class="nav-item">
+            <a href="quejas.php" class="nav-link">
+                <i class="nav-icon fas fa-file"></i>
+                <p>Quejas y reclamos</p>
+            </a>
+        </li>
+    </ul>
+</nav>
+</div>
+</aside>
 
-               <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
-                        <li class="nav-item">
-                            <a href="list.php" class="nav-link">
-                                <i class="nav-icon fas fa-star"></i>
-                                <p>Cuadros</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="precio.php" class="nav-link">
-                                 <i class="nav-icon fas fa-store"></i>
-                                 <p>Consulta precio</p>
-                             </a>
-                        </li>
- 
-                        <li class="nav-item">
-                            <a href="contactos.php" class="nav-link">
-                                <i class="nav-icon fas fa-users"></i>
-                                <p>Contactanos</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="quejas.php" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
-                                <p>Quejas y reclamos</p>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </aside>
-
-        <!--*******************************************inicio contenido ventanas****************************************************--> 
-         <div class="content-wrapper" style="background-image: url('static/img/fondo4.png');">
-         
+<!--*******************************************inicio contenido ventanas****************************************************--> 
+<div class="content-wrapper" style="background-image: url('static/img/fondo4.png');">
+   
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -191,7 +186,7 @@ include("templates/validarSesion.php");
                     </td>
                 </tr>
                 <tr align="center" valign="middle">
-                        <td>
+                    <td>
                         <div class="small-box bg-danger">
                             <div class="inner">
                                 <h3>P.Q.R.S.</h3>
@@ -205,8 +200,8 @@ include("templates/validarSesion.php");
                     </td>
                 </tr>
             </table>
-       
-        <!--*******************************************fin contenido ventanas****************************************************--> 
+            
+            <!--*******************************************fin contenido ventanas****************************************************--> 
 
             <footer>
                 <a class="appWhatsapp" href="https://wa.me/message/BH3BJKU6EVRON1"  onmousedown="btnwpp.play()" target="_blank">
@@ -215,43 +210,43 @@ include("templates/validarSesion.php");
                 <div id="fb-root"></div>
             </footer>         
 
-            </section>
-            
-            </div>
+        </section>
+        
+    </div>
 
-            <footer class="main-footer">
-                <strong>Copyright &copy; 2023 <a href="https://www.facebook.com/Cuadrosymascuadros999"  target="_blank">@Cuadrosymascuadros999</a>.</strong> Todos los derechos reservados.
-                <div class="float-right d-none d-sm-inline-block">
-                    <b>Version</b> 1.0.0
-                </div>
-            </footer>
-
-            <aside class="control-sidebar control-sidebar-dark">
-            </aside>
-
+    <footer class="main-footer">
+        <strong>Copyright &copy; 2023 <a href="https://www.facebook.com/Cuadrosymascuadros999"  target="_blank">@Cuadrosymascuadros999</a>.</strong> Todos los derechos reservados.
+        <div class="float-right d-none d-sm-inline-block">
+            <b>Version</b> 1.0.0
         </div>
-      
-    <script src="static/plugins/jquery/jquery.min.js"></script>
-    <script src="static/plugins/jquery-ui/jquery-ui.min.js"></script>
-    <script>
-        $.widget.bridge('uibutton', $.ui.button)
-    </script>
-    <script src="static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="static/plugins/chart.js/Chart.min.js"></script>
-    <script src="static/plugins/sparklines/sparkline.js"></script>
-    <script src="static/plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="static/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-    <script src="static/plugins/jquery-knob/jquery.knob.min.js"></script>
-    <script src="static/plugins/moment/moment.min.js"></script>
-    <script src="static/plugins/daterangepicker/daterangepicker.js"></script>
-    <script src="static/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="static/plugins/summernote/summernote-bs4.min.js"></script>
-    <script src="static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-    <script src="static/js/adminlte.js"></script>
-    <script src="static/js/pages/dashboard.js"></script>
-    <script src="static/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
-    <script src="static/js/adminlte.min.js"></script>   
-    <script src="static/js/confirmacion.js"></script>
+    </footer>
+
+    <aside class="control-sidebar control-sidebar-dark">
+    </aside>
+
+</div>
+
+<script src="static/plugins/jquery/jquery.min.js"></script>
+<script src="static/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+<script src="static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/plugins/chart.js/Chart.min.js"></script>
+<script src="static/plugins/sparklines/sparkline.js"></script>
+<script src="static/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="static/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="static/plugins/jquery-knob/jquery.knob.min.js"></script>
+<script src="static/plugins/moment/moment.min.js"></script>
+<script src="static/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="static/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="static/plugins/summernote/summernote-bs4.min.js"></script>
+<script src="static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="static/js/adminlte.js"></script>
+<script src="static/js/pages/dashboard.js"></script>
+<script src="static/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<script src="static/js/adminlte.min.js"></script>   
+<script src="static/js/confirmacion.js"></script>
 </body>
 
 

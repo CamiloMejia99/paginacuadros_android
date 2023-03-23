@@ -1,3 +1,7 @@
+<?php
+$inc = include("Conexion.php");
+include("validarSesion.php");
+?>
 <!DOCTYPE html> 
 <html lang="en">
 
@@ -26,209 +30,205 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
 
-     <script >
+    <script >
         var btnwpp = new Audio();
         btnwpp.src="../static/audios/Whatsapp.mp3"
     </script>
-   
+    
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-   
+ 
     <div class="wrapper">
 
         <!--div class="preloader flex-column justify-content-center align-items-center">
             <img class="animation__shake" src="../static/img/logonegro.png" alt="C&C" height="150" width="150">
         </div-->
 
-       <nav class="main-header navbar navbar-expand navbar-blue navbar-dark"> 
+        <nav class="main-header navbar navbar-expand navbar-blue navbar-dark"> 
 
-       <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <h6 class="card-title" align="left">
-                        <?php 
-                        if($inc){
-                          $con = "SELECT Nombres, Apellidos FROM Persona WHERE Cedula = (SELECT Cedula FROM administrador WHERE CodigoAdministrador = '$_SESSION[codigoadministrador]') ";
-                          $res = mysqli_query($conexion,$con);
-                          if($res){
-                            while ($r = $res->fetch_array()){
-                              $n = $r['Nombres'];
-                              $a = $r['Apellidos'];
-                              ?>
-                              <b>
-                                <i> 
-                                  Bienvenido/a
-                                  <?php
-                                  echo $n;
-                                  ?>
-                                  <?php
-                                  echo $a;
-                                  ?>
-                                </i>
-                              </b>
+         <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <h6 class="card-title" align="left">
+                    <?php 
+                    if($inc){
+                      $con = "SELECT Nombres, Apellidos FROM Persona WHERE Cedula = (SELECT Cedula FROM administrador WHERE CodigoAdministrador = '$_SESSION[codigoadministrador]') ";
+                      $res = mysqli_query($conexion,$con);
+                      if($res){
+                        while ($r = $res->fetch_array()){
+                          $n = $r['Nombres'];
+                          $a = $r['Apellidos'];
+                          ?>
+                          <b>
+                            <i> 
+                            Usuario
                               <?php
-                            }
-                          }
-                        }
-                        ?> 
-                    </h6>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="templates/CerrarSesion.php">
-                        <i class="fas fa-user-slash"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"  href="#" role="button">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+                              echo $n;
+                              ?>
+                              <?php
+                              echo $a;
+                              ?>
+                          </i>
+                      </b>
+                      <?php
+                  }
+              }
+          }
+          ?> 
+      </h6>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="templates/CerrarSesion.php">
+        <i class="fas fa-user-slash"></i>
+    </a>
+</li>
+
+</ul>
+</nav>
 <!--------------------------------------------------------------------------------------------->
 
-    <div class="content-wrapper" style="background-image: url('../static/img/fondo4.png');">
-        <br>
-        <form  method="POST" action="../menu.php" width="100">
-            <button class="btn btn-warning w-50 "  > Menu Principal </button>
-        </form>
-        <br>
-        
-                                    <ul class="list-group list-group-light">
-                                        <li class="list-group-item">
-                                            <div class="container">
-                                                <div class="row">
+<div class="content-wrapper" style="background-image: url('../static/img/fondo4.png');">
+    <br>
+    <form  method="POST" action="../menu.php" width="100">
+        <button class="btn btn-warning w-50 "  > Menu Principal </button>
+    </form>
+    <br>
+    
+    <ul class="list-group list-group-light">
+        <li class="list-group-item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <section class="content">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form class="was-validated">
+                                        <div class="card2 card-primary">
+
+                                            <div class="card-header">
+                                                <h3 class="card-title">P.Q.R.S.</h3>
+                                            </div>
+                                            <div class="container " style="background-color: #BFC4C4;">
+                                                <br>
+                                                <h4>
+                                                    <b>TIPO DE SOLICITUD</b>
+
+                                                </h4>
+
+                                                <input type="radio" name="txt_pqr" id="txt_pqrp">
+                                                <label>Petición</label> <br>
+
+                                                <input type="radio" name="txt_pqr" id="txt_pqrq">
+                                                <label>Queja/Reclamo</label><br>
+
+                                                <input type="radio" name="txt_pqr" id="txt_pqrs">
+                                                <label>Sugerencia</label><br>
+                                                <br>
+
+                                                <div class="row justify-content-start">
+                                                    <!-----contenedor 1---->
                                                     <div class="col-12">
-                                                        <section class="content">
-                                                            <div class="row">
-                                                                <div class="col-md-12">
-                                                                    <form class="was-validated">
-                                                                        <div class="card2 card-primary">
-
-                                                                            <div class="card-header">
-                                                                                <h3 class="card-title">P.Q.R.S.</h3>
-                                                                            </div>
-                                                                            <div class="container " style="background-color: #BFC4C4;">
-                                                                                <br>
-                                                                                <h4>
-                                                                                    <b>TIPO DE SOLICITUD</b>
-
-                                                                                </h4>
-
-                                                                                <input type="radio" name="txt_pqr" id="txt_pqrp">
-                                                                                <label>Petición</label> <br>
-
-                                                                                <input type="radio" name="txt_pqr" id="txt_pqrq">
-                                                                                <label>Queja/Reclamo</label><br>
-
-                                                                                <input type="radio" name="txt_pqr" id="txt_pqrs">
-                                                                                <label>Sugerencia</label><br>
-                                                                                <br>
-
-                                                                                <div class="row justify-content-start">
-                                                                                    <!-----contenedor 1---->
-                                                                                    <div class="col-12">
-                                                                                        <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                                                                                        <input type="text" class="form-control" id="">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <br>
-                                                                                <label for="exampleInputEmail1" class="form-label">Tipo de documento</label>
-                                                                                <div class="mb-3">
-                                                                                    <select class="form-select" required aria-label="select example">
-                                          <option value="1">Cedula de ciudadania</option>
-                                          <option value="2">Tarjeta de identidad</option>
-                                          <option value="3">Pasaporte</option>
-                                          <option value="4">Otro</option>
-                                        </select>
-                                                                                </div>
-                                                                                <br>
-                                                                                <div class="row justify-content-start">
-                                                                                    <!-----contenedor 1---->
-                                                                                    <div class="col-12">
-                                                                                        <label for="exampleInputEmail1" class="form-label">Numero de documento</label>
-                                                                                        <input type="number" class="form-control" id="">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <br>
-                                                                                <label for="exampleInputEmail1" class="form-label">Adjuntar documento</label>
-                                                                                <div class="mb-3">
-                                                                                    <input type="file" class="form-control" aria-label="file example" required>
-                                                                                    <div class="invalid-feedback">Subir fotocopia de documento</div>
-                                                                                </div>
-
-                                                                                <div class="mb-3">
-                                                                                    <label for="validationTextarea" class="form-label">Descripción de solicitud</label>
-                                                                                    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Area de texto" required></textarea>
-                                                                                    <div class="invalid-feedback">
-                                                                                        Por favor haga una breve descripción de la solicitud
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="mb-3">
-                                                                                    <button class="btn btn-primary" type="submit">Enviar</button>
-                                                                                </div>
-                                                                                <br>
-                                                                            </div>
-                                                                        </div>
-                                                                    </form>
-                                                                </div>
-                                                            </div>
+                                                        <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                                                        <input type="text" class="form-control" id="">
                                                     </div>
-                                                    </section>
+                                                </div>
+                                                <br>
+                                                <label for="exampleInputEmail1" class="form-label">Tipo de documento</label>
+                                                <div class="mb-3">
+                                                    <select class="form-select" required aria-label="select example">
+                                                      <option value="1">Cedula de ciudadania</option>
+                                                      <option value="2">Tarjeta de identidad</option>
+                                                      <option value="3">Pasaporte</option>
+                                                      <option value="4">Otro</option>
+                                                  </select>
+                                              </div>
+                                              <br>
+                                              <div class="row justify-content-start">
+                                                <!-----contenedor 1---->
+                                                <div class="col-12">
+                                                    <label for="exampleInputEmail1" class="form-label">Numero de documento</label>
+                                                    <input type="number" class="form-control" id="">
                                                 </div>
                                             </div>
-                                </div>
-                                </li>
-                                </ul>
-                        
-    </div>
-<!--------------------------------------------------------------------------------------------->
-                 <footer>
-                <a class="appWhatsapp" href="https://wa.me/message/BH3BJKU6EVRON1"  onmousedown="btnwpp.play()" target="_blank">
-                    <img src="../static/img/logowpp.png" alt="WhatsApp"> 
-                </a>
-                <div id="fb-root"></div>
-            </footer>         
+                                            <br>
+                                            <label for="exampleInputEmail1" class="form-label">Adjuntar documento</label>
+                                            <div class="mb-3">
+                                                <input type="file" class="form-control" aria-label="file example" required>
+                                                <div class="invalid-feedback">Subir fotocopia de documento</div>
+                                            </div>
 
-            </section>
-            
+                                            <div class="mb-3">
+                                                <label for="validationTextarea" class="form-label">Descripción de solicitud</label>
+                                                <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Area de texto" required></textarea>
+                                                <div class="invalid-feedback">
+                                                    Por favor haga una breve descripción de la solicitud
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <button class="btn btn-primary" type="submit">Enviar</button>
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
+        </div>
+    </div>
+</li>
+</ul>
 
-            <footer class="main-footer">
-                <strong>Copyright &copy; 2023 <a href="https://www.facebook.com/Cuadrosymascuadros999"  target="_blank">@Cuadrosymascuadros999</a>.</strong> Todos los derechos reservados.
-                <div class="float-right d-none d-sm-inline-block">
-                    <b>Version</b> 1.0.0
-                </div>
-            </footer>
+</div>
+<!--------------------------------------------------------------------------------------------->
+<footer>
+    <a class="appWhatsapp" href="https://wa.me/message/BH3BJKU6EVRON1"  onmousedown="btnwpp.play()" target="_blank">
+        <img src="../static/img/logowpp.png" alt="WhatsApp"> 
+    </a>
+    <div id="fb-root"></div>
+</footer>         
 
-            <aside class="control-sidebar control-sidebar-dark">
-            </aside>
+</section>
+
+</div>
+
+<footer class="main-footer">
+    <strong>Copyright &copy; 2023 <a href="https://www.facebook.com/Cuadrosymascuadros999"  target="_blank">@Cuadrosymascuadros999</a>.</strong> Todos los derechos reservados.
+    <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 1.0.0
+    </div>
+</footer>
+
+<aside class="control-sidebar control-sidebar-dark">
+</aside>
 <!--------------------------------------------------------------------------------------------->            
-    </div>  
+</div>  
 
 
 <!--------------------------------------------------------------------------------------------->
-    <script src="../static/plugins/jquery/jquery.min.js"></script>
-    <script src="../static/plugins/jquery-ui/jquery-ui.min.js"></script>
-    <script>
-        $.widget.bridge('uibutton', $.ui.button)
-    </script>
-    <script src="../static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../static/plugins/chart.js/Chart.min.js"></script>
-    <script src="../static/plugins/sparklines/sparkline.js"></script>
-    <script src="../static/plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="../static/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-    <script src="../static/plugins/jquery-knob/jquery.knob.min.js"></script>
-    <script src="../static/plugins/moment/moment.min.js"></script>
-    <script src="../static/plugins/daterangepicker/daterangepicker.js"></script>
-    <script src="../static/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="../static/plugins/summernote/summernote-bs4.min.js"></script>
-    <script src="../static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-    <script src="../static/js/adminlte.js"></script>
-    <script src="../static/js/pages/dashboard.js"></script>
-    <script src="../static/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
-    <script src="../static/js/adminlte.min.js"></script>   
-    <script src="../static/js/confirmacion.js"></script>
+<script src="../static/plugins/jquery/jquery.min.js"></script>
+<script src="../static/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+<script src="../static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../static/plugins/chart.js/Chart.min.js"></script>
+<script src="../static/plugins/sparklines/sparkline.js"></script>
+<script src="../static/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="../static/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="../static/plugins/jquery-knob/jquery.knob.min.js"></script>
+<script src="../static/plugins/moment/moment.min.js"></script>
+<script src="../static/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="../static/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="../static/plugins/summernote/summernote-bs4.min.js"></script>
+<script src="../static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="../static/js/adminlte.js"></script>
+<script src="../static/js/pages/dashboard.js"></script>
+<script src="../static/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<script src="../static/js/adminlte.min.js"></script>   
+<script src="../static/js/confirmacion.js"></script>
 </body>
 </html>
 <!--------------------------------------------------------------------------------------------->

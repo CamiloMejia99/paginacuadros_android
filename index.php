@@ -2,44 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Iniciar sesion</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
-    <link rel="icon" type="image/x-icon" href="static/img/icon_pag.png">
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/plugins/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="static/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-    <link rel="stylesheet" href="static/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-    <link rel="stylesheet" href="static/plugins/jqvmap/jqvmap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/adminlte.min.css')}}">
-    <link rel="stylesheet" href="static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-    <link rel="stylesheet" href="static/plugins/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="static/plugins/summernote/summernote-bs4.min.css">
-    <link rel="stylesheet" href="static/css/adminlte.min.css">
-    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&family=Source+Serif+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Iniciar sesion</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+	<link rel="icon" type="image/x-icon" href="static/img/icon_pag.png">
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="static/plugins/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="static/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+	<link rel="stylesheet" href="static/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+	<link rel="stylesheet" href="static/plugins/jqvmap/jqvmap.min.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/adminlte.min.css')}}">
+	<link rel="stylesheet" href="static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+	<link rel="stylesheet" href="static/plugins/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" href="static/plugins/summernote/summernote-bs4.min.css">
+	<link rel="stylesheet" href="static/css/adminlte.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&family=Source+Serif+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
 
-    <script >
+	<script >
 		var btnwpp = new Audio();
 		btnwpp.src="static/audios/Whatsapp.mp3"
 	</script>
-   
+	
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed" background="static/img/fondo3.png">
-   
-	<header>
+	
+	
 		<nav id="navbar-example2" class="navbar px-3 mb-3" style="background-color: #007bff;" >
 			<a class="navbar-brand text-white" href=""> 
-                <img src="static/img/logonegro.png" class="d-block" height="40">
-            </a>
+				<img src="static/img/logonegro.png" class="d-block" height="40">
+			</a>
 			<ul class="nav nav-pillss">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Cuentas</a>
@@ -55,7 +55,7 @@
 				</li>
 			</ul>
 		</nav>
-	</header>
+
 	<div class="row h-100 justify-content-center align-items-center ">
 		<div class="card col-10 border-black" style="background-color: #F0F2EE;" >
 			<br>
@@ -120,10 +120,10 @@
 							<div class="col-md-8" style="color: #56A308;">
 								<div class="card-body" align="justify">
 									<div class="alert alert-secondary border-white" style="color: black;" style="background-color: black;"  role="alert" align="justify">
-                                    Cuadros decorativos de todos los tamaños y diseños. <br>
-									<b>¡NO TE ARREPENTIRAS!</b>
-                                    
-                                    
+										Cuadros decorativos de todos los tamaños y diseños. <br>
+										<b>¡NO TE ARREPENTIRAS!</b>
+										
+										
 									</div>
 								</div>
 							</div>
@@ -137,36 +137,36 @@
 	</div>
 	<br>
 
-    <footer>
-        <a class="appWhatsapp" href="https://wa.me/message/BH3BJKU6EVRON1"  onmousedown="btnwpp.play()" target="_blank">
-            <img src="static/img/logowpp.png" alt="WhatsApp"> 
-        </a>
-        <div id="fb-root"></div>
-     </footer>   
+	<footer>
+		<a class="appWhatsapp" href="https://wa.me/message/BH3BJKU6EVRON1"  onmousedown="btnwpp.play()" target="_blank">
+			<img src="static/img/logowpp.png" alt="WhatsApp"> 
+		</a>
+		<div id="fb-root"></div>
+	</footer>   
 
-        
-      
-    <script src="static/plugins/jquery/jquery.min.js"></script>
-    <script src="static/plugins/jquery-ui/jquery-ui.min.js"></script>
-    <script>
-        $.widget.bridge('uibutton', $.ui.button)
-    </script>
-    <script src="static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="static/plugins/chart.js/Chart.min.js"></script>
-    <script src="static/plugins/sparklines/sparkline.js"></script>
-    <script src="static/plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="static/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-    <script src="static/plugins/jquery-knob/jquery.knob.min.js"></script>
-    <script src="static/plugins/moment/moment.min.js"></script>
-    <script src="static/plugins/daterangepicker/daterangepicker.js"></script>
-    <script src="static/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="static/plugins/summernote/summernote-bs4.min.js"></script>
-    <script src="static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-    <script src="static/js/adminlte.js"></script>
-    <script src="static/js/pages/dashboard.js"></script>
-    <script src="static/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
-    <script src="static/js/adminlte.min.js"></script>   
-    <script src="static/js/confirmacion.js"></script>
+	
+	
+	<script src="static/plugins/jquery/jquery.min.js"></script>
+	<script src="static/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<script>
+		$.widget.bridge('uibutton', $.ui.button)
+	</script>
+	<script src="static/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="static/plugins/chart.js/Chart.min.js"></script>
+	<script src="static/plugins/sparklines/sparkline.js"></script>
+	<script src="static/plugins/jqvmap/jquery.vmap.min.js"></script>
+	<script src="static/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+	<script src="static/plugins/jquery-knob/jquery.knob.min.js"></script>
+	<script src="static/plugins/moment/moment.min.js"></script>
+	<script src="static/plugins/daterangepicker/daterangepicker.js"></script>
+	<script src="static/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+	<script src="static/plugins/summernote/summernote-bs4.min.js"></script>
+	<script src="static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+	<script src="static/js/adminlte.js"></script>
+	<script src="static/js/pages/dashboard.js"></script>
+	<script src="static/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+	<script src="static/js/adminlte.min.js"></script>   
+	<script src="static/js/confirmacion.js"></script>
 </body>
 
 
